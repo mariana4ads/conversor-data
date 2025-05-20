@@ -3,21 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor de Data/title>
+    <title>Conversor de Data</title>
+    <style>
+        body {
+            background-color: #d4d4d4;
+            color: #000000;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        input {
+            padding: 8px;
+            margin-top: 10px;
+            background-color: #ffffff;
+            color: #000000;
+            border: 1px solid #555;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 8px;
+            margin-top: 10px;
+            background-color: #1ca10f;
+            color: #fff;
+            border: 1px solid #0c2e02;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #4ece63;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-  <h2>Conversor de Data (Norte-Americano ➜ Brasil)</h2>
-  <label for="dataInput">Digite a data (YYYY-MM-DD):</label>
-  <input type="text" id="dataInput" placeholder="2025-12-31">
-  <button onclick="converterData()">Converter</button>
+    <h1>Conversor de Data </h1>
+    <p>(Internacional ➜ Brasil)</p>
+    <label for="dataInput">Digite a data (YYYY-MM-DD):</label><br>
+    <input type="text" id="dataInput" placeholder="2025-12-31">
+    <button onclick="converterData()">Converter</button>
 
-  <p><strong>Data convertida:</strong> <span id="resultado"></span></p>
+    <p><strong>Data convertida:</strong> <span id="resultado"></span></p>
 
-  <script>
-    function converterData() {
-      const entrada = document.getElementById("dataInput").value;
-      const convertido = entrada.replace(/(\d{4})-(\d{2})-(\d{2})/, "$3/$2/$1");
-      document.getElementById("resultado").textContent = convertido;
+    <script>
+        function converterData() {
+        const entrada = document.getElementById("dataInput").value;
+        const convertido = entrada.replace(/(\d{4})-(\d{2})-(\d{2})/, "$3/$2/$1");
+        document.getElementById("resultado").textContent = convertido;
     }
   </script>
 </body>
